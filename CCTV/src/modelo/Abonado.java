@@ -12,6 +12,8 @@ public class Abonado {
 
     private Domicilio domicilio;
     private boolean debitoAutomatico;
+    private String celular;
+    private String mail;
 
     public Abonado() {
     }

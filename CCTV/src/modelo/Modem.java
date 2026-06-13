@@ -15,7 +15,8 @@ public class Modem {
     private String protocoloRed;
     private int nroLeds;
     private boolean firewall;
-
+    private String estado;
+    
     private DocumentoHardware documentoHardware;
     private DocumentoDriver documentoDriver;
 
@@ -43,6 +44,7 @@ public class Modem {
         this.firewall = firewall;
         this.documentoHardware = documentoHardware;
         this.documentoDriver = documentoDriver;
+        this.estado = "Activo";
     }
 
     public String getSerialNumber() {
@@ -124,4 +126,12 @@ public class Modem {
     public void setDocumentoDriver(DocumentoDriver documentoDriver) {
         this.documentoDriver = documentoDriver;
     }
+    
+    public String getEstado() {
+    return estado;
+}
+
+    public void setEstado(String estado) {
+    this.estado = estado;
+}
 }
