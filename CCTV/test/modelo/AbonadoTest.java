@@ -2,15 +2,15 @@
 package modelo;
 
 import java.time.LocalDate;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import static org.junit.Assert.*;
 import org.junit.jupiter.api.Timeout;
-
 
 /**
  *
@@ -21,7 +21,7 @@ public class AbonadoTest {
     private static Abonado ciu;
     private int i = 1;
 
-    @BeforeAll
+    @BeforeClass
     public static void antesDeTodo() {
 
         ciu = new Abonado(
@@ -32,7 +32,7 @@ public class AbonadoTest {
                 "INGRESO de abonado del bien");
     }
 
-    @AfterAll
+    @AfterClass
     public static void despuesDeTodo() {
 
         System.out.println(
@@ -42,14 +42,14 @@ public class AbonadoTest {
                 "Modem rotos reparados, Abonados Felices");
     }
 
-    @BeforeEach
+    @Before
     public void before() {
 
         System.out.println("----------------------");
         System.out.println("Test numero: " + i);
     }
 
-    @AfterEach
+    @After
     public void after() {
 
         System.out.println("----------------------");
@@ -94,8 +94,7 @@ public class AbonadoTest {
                 ciu.getPassword());
     }
 
-    @Test
-    @Timeout(30)
+    @Test(timeout = 30)
     public void testDelay() {
 
         ciu.delay(45);
@@ -117,8 +116,8 @@ public class AbonadoTest {
         c1.abonadosDiferentes(c2);
 
         assertNotSame(
+                "misma persona",
                 c1,
-                c2,
-                "misma persona");
+                c2);
     }
 }
