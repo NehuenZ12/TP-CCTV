@@ -9,12 +9,6 @@ import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.*;
 
-
-/**
- *
- * @author Nehuen
- */
-
 @RunWith(Parameterized.class)
 public class ParameterABOTest {
 
